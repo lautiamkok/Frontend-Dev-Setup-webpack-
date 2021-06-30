@@ -38,10 +38,7 @@ For more on Tailwind CSS, check out https://tailwindcss.com/docs to get started.
 
     * http://localhost:9000/about.html for the About page
 
-    Then start developing the rest of pages following these two preceding examples. An interpolation example can be found at:
-
-    * http://localhost:9000/interpolation.html
-
+    Then start developing the rest of pages following these two preceding examples.
 
 # Building for Prototyping
 
@@ -131,3 +128,24 @@ Notes:
 1. JavaScript to be called at the end of body element so that it will load after the rest of the DOM is available to parse.
 
 2. Pass `true` as the fifth argument  (in_footer) for the `wp_enqueue_script` function.
+
+# Notes
+
+1. Use the `/src/assets/images/` folder for images that you want to be processed by webpack. Then in your HTML tags, just use `~assets/images/` to request your images, for example:
+    
+    ```
+    <img src="~assets/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg">
+    ```
+
+2. Use the `/public/static/` folder for images that you do NOT want to be processed by webpack. Then in your HTML tags, just use `static/` or '/static/' to request your images, for example:
+
+    ```
+    <p><img src="static/sample-2.jpg"></p>
+    <p><img src="/static/sample-3.jpg"></p>
+    ```
+
+    However, if you want to process the images inside the `/public/static/` folder, then in your HTML tags, use `~static/` to request your images, for example:
+
+    ```
+    <img src="~static/sample-1.jpg">
+    ```

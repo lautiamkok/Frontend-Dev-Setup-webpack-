@@ -202,11 +202,7 @@ module.exports = {
       },
 
       // Allow webpack to pick up (import) the images from HTML <img> tags
-      // without the use of require statements, but it prevented _lodash <%= %>
-      // being interpreted by HTMLWebpackPlugin (leaving the text untranslated)
-      // Otherwise, use the <%= %> lodash template to load image, for example:
-      // <img src='<%=require('../assets/images/sample.jpg')%>'>
-      // https://stackoverflow.com/a/53784390/413225
+      // without the use of require statements
       {
         test: /\.html$/i,
         loader: 'html-loader',
