@@ -1,6 +1,6 @@
 # Frontend Dev Setup (webpack)
 
-Setup for frontend web development and prototyping using webpack, Vue.js, and Tailwind CSS.
+A setup for frontend web development and prototyping using webpack, Vue.js, and Tailwind CSS.
 
 For more on webpack, check out https://webpack.js.org/guides/getting-started/ to get started. 
 
@@ -32,7 +32,16 @@ For more on Tailwind CSS, check out https://tailwindcss.com/docs to get started.
     $ npm run dev
     ```
 
-2. Access the application at http://localhost:9000/.
+2. Access the dev pages at http://localhost:9000/ as follows:
+
+    * http://localhost:9000/ for the Home page
+
+    * http://localhost:9000/about.html for the About page
+
+    Then start developing the rest of pages following these two preceding examples. An interpolation example can be found at:
+
+    * http://localhost:9000/interpolation.html
+
 
 # Building for Prototyping
 
