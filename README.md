@@ -140,8 +140,8 @@ Notes:
 2. Use the `/public/static/` folder for images that you do NOT want to be processed by webpack. Then in your HTML tags, just use `static/` or `/static/` to request your images, for example:
 
     ```
-    <p><img src="static/sample-2.jpg"></p>
-    <p><img src="/static/sample-3.jpg"></p>
+    <img src="static/sample-2.jpg">
+    <img src="/static/sample-3.jpg">
     ```
 
     However, if you want to process the images inside the `/public/static/` folder, then in your HTML tags, use `~static/` to request your images, for example:
