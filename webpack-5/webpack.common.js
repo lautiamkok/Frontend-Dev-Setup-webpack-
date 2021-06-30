@@ -312,6 +312,7 @@ if (mode === 'production') {
       use: [
         MiniCssExtractPlugin.loader,
         'css-loader',
+        'postcss-loader',
       ]
     },
 

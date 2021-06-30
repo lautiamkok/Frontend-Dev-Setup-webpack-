@@ -48,7 +48,7 @@ For more on Tailwind CSS, check out https://tailwindcss.com/docs to get started.
     $ npm run build
     ```
 
-2. Purge unused CSS styles:
+2. Purge unused CSS styles (this step is no need if you are using Tailwind CSS):
 
     ```bash
     $ npm run purge
@@ -101,7 +101,7 @@ Notes:
     $ npm run build
     ```
 
-2. Purge unused CSS styles:
+2. Purge unused CSS styles (this step is no need if you are using Tailwind CSS):
 
     ```bash
     $ npm run purge
