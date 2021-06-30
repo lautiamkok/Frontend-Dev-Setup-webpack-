@@ -137,7 +137,7 @@ Notes:
     <img src="~assets/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg">
     ```
 
-2. Use the `/public/static/` folder for images that you do NOT want to be processed by webpack. Then in your HTML tags, just use `static/` or '/static/' to request your images, for example:
+2. Use the `/public/static/` folder for images that you do NOT want to be processed by webpack. Then in your HTML tags, just use `static/` or `/static/` to request your images, for example:
 
     ```
     <p><img src="static/sample-2.jpg"></p>
