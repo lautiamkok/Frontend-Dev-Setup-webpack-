@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="text-gray-500">
+  <head>
+    <title>Devtool</title>
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <style type="text/css">
+    .box {
+      width: 200px;
+      height: 200px;
+      /*background-image: url('sample.jpg');*/
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+      border: 1px solid red;
+    }
+    </style>
+
+    <h1 class="hello p-6">Hello World</h1>
+
+    <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button>
+
+    <div id="app">
+      <custom-component-1 inline-template>
+        <div class="custom-component-1">
+          <h1>Component 1</h1>
+          <p><img src="~assets/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg"></p>
+          <p><img src="~static/sample-1.jpg"></p>
+          <p><img src="static/sample-2.jpg"></p>
+          <p><img src="/static/sample-3.jpg"></p>
+          <span>Photo by <a href="https://unsplash.com/@grakozy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Greg Rakozy</a> on <a href="https://unsplash.com/s/photos/stars?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+      </custom-component-1>
+
+      <div is="custom-component-1" inline-template>
+        <div>
+          <h1>Component 1 (vue2)</h1>
+          <ol>
+
+          <li class="box"
+            v-for="item in items"
+            v-bind:key="item.id"
+            v-bind:style="{ 'background-image': 'url(' + item.image + ')' }"
+          >{{ item.id }}</li>
+        </ol>
+        </div>
+      </div>
+
+      <custom-component-2 inline-template>
+        <form>
+          <h1>Component 2 (vue2)</h1>
+          <input type="text" v-model="message" placeholder="say something">
+          {{ message }}
+        </form>
+      </custom-component-2>
+
+      <div is="custom-component-2" inline-template>
+        <form>
+          <h1>Component 2 (vue2)</h1>
+          <input type="text" v-model="message" placeholder="say something">
+          {{ message }}
+        </form>
+      </div>
+
+      <component-slot-1 v-slot="{ message }">
+        basic (vue2/3)
+        <form>
+          <input type="text" v-model="message" placeholder="say something">
+          {{ hello }} {{ message }}
+        </form>
+      </component-slot-1>
+
+      <component-slot-2 v-slot="{ message }" :message="hello">
+        probs (vue2/3)
+        <form>
+          <input type="text" v-model="message" placeholder="say something">
+          {{ hello }} {{ message }}
+        </form>
+      </component-slot-2>
+
+      <component-slot-3 v-slot="{ message }">
+        bus (vue2)
+        <form>
+          <input type="text" v-model="message" placeholder="say something">
+          {{ hello }} {{ message }}
+        </form>
+      </component-slot-3>
+
+      <component-slot-4 v-slot="{ message }">
+        emitter (vue3)
+        <form>
+          <input type="text" v-model="message" placeholder="say something">
+          {{ hello }} {{ message }}
+        </form>
+      </component-slot-4>
+
+       <button v-on:click.prevent="emitMessage">change component-slot-3</button>
+       <button v-on:click.prevent="emitContent">change component-slot-4</button>
+
+    </div>
+  </body>
+</html>

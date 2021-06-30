@@ -1,0 +1,62 @@
+/**
+ * ===============================================================
+ * Variables
+ * ===============================================================
+ */
+
+/**
+ * Fonts
+ */
+@font-modern: 'Open Sans', sans-serif;
+
+/**
+ * Texts
+ */
+@text-size: 22px;
+@text-color: #000000;
+@link-color: #000000;
+
+/**
+ * Grey shades
+ * https://www.w3schools.com/colors/colors_shades.asp
+ */
+@grey-xdark: #1d1d1b;
+@grey-dark: #666666;
+@grey-medium: #999999;
+@grey-light: #c6c6c6;
+@grey-xlight: #f8f7f5;
+@grey-xxlight: #fcfaf6;
+
+/**
+ * ===============================================================
+ * Common elements
+ * ===============================================================
+ */
+
+html, body {
+  font-family: @font-modern;
+  font-size: @text-size;
+  font-weight: normal;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  &.dark {
+    background-color: @grey-xdark;
+    color: #fff;
+  }
+}
+
+.dark {
+  a {
+    color: #fff;
+  }
+}
+
+.hello {
+  color: red;
+  font-family: @font-modern;
+  font-size: 3em;
+  font-weight: 300;
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Devtool</title>
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <style type="text/css">
+    .box {
+      width: 200px;
+      height: 200px;
+      /*background-image: url('sample.jpg');*/
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+      border: 1px solid red;
+    }
+  </style>
+
+    <h1 class="hello">Hello World</h1>
+
+    <div id="app">
+      <custom-component-1 inline-template>
+        <div class="custom-component-1">
+          <h1>Component 1</h1>
+          <p><img src="~assets/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg"></p>
+          <p><img src="~static/sample-1.jpg"></p>
+          <p><img src="static/sample-2.jpg"></p>
+          <p><img src="/static/sample-3.jpg"></p>
+          <span>Photo by <a href="https://unsplash.com/@grakozy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Greg Rakozy</a> on <a href="https://unsplash.com/s/photos/stars?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+      </custom-component-1>
+
+      <div is="custom-component-1" inline-template>
+        <div>
+          <h1>Component 1</h1>
+          <ol>
+
+          <li class="box"
+            v-for="item in items"
+            v-bind:key="item.id"
+            v-bind:style="{ 'background-image': 'url(' + item.image + ')' }"
+          >{{ item.id }}</li>
+        </ol>
+        </div>
+      </div>
+
+      <custom-component-2 inline-template>
+        <form>
+          <h1>Component 2</h1>
+          <input type="text" v-model="message" placeholder="say something">
+          {{ message }}
+        </form>
+      </custom-component-2>
+
+      <div is="custom-component-2" inline-template>
+        <form>
+          <h1>Component 2</h1>
+          <input type="text" v-model="message" placeholder="say something">
+          {{ message }}
+        </form>
+      </div>
+
+    </div>
+  </body>
+</html>

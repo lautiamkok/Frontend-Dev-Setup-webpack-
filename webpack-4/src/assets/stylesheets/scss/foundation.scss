@@ -1,0 +1,91 @@
+// Customize your Foundation in this doc here.
+// https://get.foundation/sites/docs/sass.html
+
+@import 'foundation-sites/scss/foundation';
+
+// Global customisations:
+// Customise the padding gutter size.
+// $grid-padding-gutters: 20px;
+// $grid-margin-gutters: 20px;
+
+// Customise the padding gutter size on different breakpoints.
+$grid-padding-gutters: (
+  small: 30px,
+  medium: 30px,
+  large: 20px,
+);
+
+$grid-margin-gutters: (
+  small: 0,
+  medium: 20px,
+  large: 20px,
+);
+
+// Local customisations:
+// Add grid gutters to specific elements.
+// Must use 'grid-x' without 'grid-padding-x'.
+.card-item {
+  @include xy-gutters($gutters: (
+    small: 0,
+    medium: 20px,
+    large: 20px,
+  ));
+}
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Grids (choose one)
+@include foundation-xy-grid-classes;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+
+// Generic components
+@include foundation-button;
+@include foundation-button-group;
+// @include foundation-close-button;
+// @include foundation-label;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-switch;
+// @include foundation-table;
+
+// Basic components
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-callout;
+// @include foundation-card;
+// @include foundation-dropdown;
+// @include foundation-pagination;
+// @include foundation-tooltip;
+
+// Containers
+// @include foundation-accordion;
+// @include foundation-media-object;
+// @include foundation-orbit;
+// @include foundation-responsive-embed;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+
+// Menu-based containers
+@include foundation-menu;
+// @include foundation-menu-icon;
+// @include foundation-accordion-menu;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown-menu;
+
+// Layout components
+// @include foundation-off-canvas;
+// @include foundation-reveal;
+// @include foundation-sticky;
+// @include foundation-title-bar;
+// @include foundation-top-bar;
+
+// Helpers
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+@include foundation-prototype-classes;
+

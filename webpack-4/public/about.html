@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Devtool</title>
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <div id="app">
+      <custom-component-1 inline-template>
+        <div class="custom-component-1">
+          <p><img src="~assets/images/greg-rakozy-oMpAz-DN-9I-unsplash.jpg"></p>
+          <span>Photo by <a href="https://unsplash.com/@grakozy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Greg Rakozy</a> on <a href="https://unsplash.com/s/photos/stars?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+      </custom-component-1>
+
+      <div is="custom-component-1" inline-template>
+        <div>
+          <p>component 1</p>
+        </div>
+      </div>
+
+      <custom-component-2 inline-template>
+        <form>
+          <input type="text" v-model="message">
+          {{ message }}
+        </form>
+      </custom-component-2>
+
+      <div is="custom-component-2" inline-template>
+        <form>
+          <input type="text" v-model="message">
+          {{ message }}
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
