@@ -1,12 +1,12 @@
 # Frontend Dev Setup (webpack)
 
-> Setup for frontend web development and prototyping using webpack.
+Setup for frontend web development and prototyping using webpack, Vue.js, and Tailwind CSS.
 
-Built with Vue.js and ES6+. Compiled with Webpack.
+For more on webpack, check out https://webpack.js.org/guides/getting-started/ to get started. 
 
 For more on Vue.js, check out https://vuejs.org/v2/guide/ to get started. 
 
-For more on webpack, check out https://webpack.js.org/guides/getting-started/ to get started. 
+For more on Tailwind CSS, check out https://tailwindcss.com/docs to get started. 
 
 # Installing Dependencies
 
