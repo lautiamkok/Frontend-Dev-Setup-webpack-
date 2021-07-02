@@ -2,10 +2,9 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 // Get the webpack envn `mode` variable.
 const { mode, watch, outputPublicPath } = require('webpack-nano/argv')
@@ -107,7 +106,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000,
+    port: 9001,
 
     // Use historyApiFallback: true for HTML5 History Mode in Vue.
     // https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations
@@ -227,8 +226,6 @@ module.exports = {
   },
 
   plugins: [
-    // new BundleAnalyzerPlugin(),
-
     // Make sure to include the plugin for Vue.
     new VueLoaderPlugin(),
 
@@ -273,7 +270,12 @@ if (mode === 'development') {
 
         // style-loader is required, otherwise fonts are not loaded in dev mode.
         // https://webpack.js.org/loaders/style-loader/
-        'style-loader',
+        {
+            loader: "style-loader",
+            options: {
+              insert: "body",
+            },
+          },
 
         'css-loader',
 
@@ -288,7 +290,12 @@ if (mode === 'development') {
     {
       test: /\.s[ac]ss$/i,
       use: [
-        'style-loader',
+        {
+            loader: "style-loader",
+            options: {
+              insert: "body",
+            },
+          },
         'css-loader',
         'sass-loader',
       ],
@@ -297,7 +304,12 @@ if (mode === 'development') {
     {
       test: /\.less$/,
       use: [
-        'style-loader',
+        {
+            loader: "style-loader",
+            options: {
+              insert: "body",
+            },
+          },
         'css-loader',
         'less-loader',
       ]
