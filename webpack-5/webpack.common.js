@@ -106,7 +106,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9001,
+    port: 9000,
 
     // Use historyApiFallback: true for HTML5 History Mode in Vue.
     // https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations

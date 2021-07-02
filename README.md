@@ -1,6 +1,6 @@
-# Frontend Dev Setup (webpack)
+# Webpack Vanilla
 
-A setup for frontend web development and prototyping using webpack, Vue.js, and Tailwind CSS.
+A vanilla setup for frontend web development and prototyping using webpack, Vue.js, and Tailwind CSS.
 
 For more on webpack, check out https://webpack.js.org/guides/getting-started/ to get started. 
 
